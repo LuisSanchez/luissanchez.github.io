@@ -1,6 +1,6 @@
 html,
 body {
-  height: 100%;
+  	height: 100%;
 }
 
 .jumbotron {
@@ -14,9 +14,90 @@ body {
     background-size: cover;
 }
 
+.title-separator {
+ 		height: 500px; 
+}
+
+.title-separator > div > h1 {
+ 		padding-top: 20%;
+  	padding-bottom: 20%;
+}
+
 .cover-images {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+#parallax1, 
+#parallax2, 
+#parallax3 {
+		position: relative;
+		overflow: hidden;
+		height: 100vh;
+}
+
+#parallax1 > div, 
+#parallax2 > div, 
+#parallax3 > div {
+		position: relative;
+		height: 200%;
+		-webkit-transform: translateZ(0);
+		-webkit-backface-visibility: hidden;
+		-webkit-perspective: 1000;
+}
+	
+.knife-long {
+		position: absolute;
+		width: 50%;
+}
+
+#wood-table {
+		position: absolute;
+		width: 50%;
+}
+
+/* carousel */
+.fill {
+    width:100%;
+    height:100%;
+    background-position:center;
+    background-size:cover;
+    position:absolute;
+		/*padding-left: 0;
+			padding-right: 0;*/
+		/*margin-bottom: 10px;*/
+}
+
+.carousel-inner > .item {
+    height:auto;
+    min-height:600px;
+    width:100%;
+}
+
+.container {
+    padding-left:0;
+    padding-right:0;
+}
+
+.carousel {
+    width:100%;
+}
+
+.carousel-indicators {
+    bottom:0;
+    left:68%;
+    text-align:right;
+}
+
+.carousel-caption {
+		text-shadow: 1.5px 2px 4px #000;
+}
+/* end carousel */
+
+
+footer {
+		padding-top: 40px;
+		padding-top: 20px;
 }

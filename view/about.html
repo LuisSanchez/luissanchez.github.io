@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <title>Sandbox</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/offcanvas-left-menu.css" rel="stylesheet">
+    <link href="../css/sandbox.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- <script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+      
+    <script type="text/javascript" src="../js/_dependent/greensock/TweenMax.min.js"></script>
+		<script type="text/javascript" src="../js/_dependent/greensock/plugins/ScrollToPlugin.min.js"></script>
+		<!--<script type="text/javascript" src="js/_dependent/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  	<script type="text/javascript" src="../js/_examples/modernizr.custom.min.js"></script>
+  	<script type="text/javascript" src="../js/_mobile/iscroll-probe.js"></script>
+  	<script type="text/javascript" src="../js/jquery.scrollmagic.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.scrollmagic.debug.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="slide-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-toggle"> 
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </a>
+		  <a class="navbar-brand" href="#">Sandbox</a>
+        </div>
+        <div id="slidemenu">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li class="active"><a href="#">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Food <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="food/beef-wellington.html">Beef Wellington</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Hello!</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+      
+  <!--wrap the page content do not style this-->
+ <div id="page-content">
+    
+	<!-- Main jumbotron for a primary marketing message or call to action -->
+	<section id="intro">
+		<div class="jumbotron">
+			<div class="container">
+				<h1>Just a bored guy...</h1>
+				<p>This page is made in order to test new frameworks, new snippets, new technologies and maybe developing a new ones!</p>
+				<!--<p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>-->
+			</div>
+		</div>
+	</section>
+
+	<div class="container marketing">
+		<!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-12">
+					<h2>About</h2>
+					<small>This is just a test, for small p</small>
+					<p>This is just an <abbr title="attribute">attr</abbr></p>
+					<p>Nullam <mark>highlight</mark> quis risus eget urna <ins>mollis</ins> ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+					<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+					<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+					
+					<blockquote>
+						<p>Wow! I have no idea on what to put in here... but its just a nice blockquotes from Bootstrap</p>
+						<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+					</blockquote>
+				</div>
+		</div>
+	</div><!-- /.container -->
+
+	<div id="parallax1">
+		<div style="background-image: url(../img/granito-1.jpg);">
+			<img id="wood-table" src="../img/kitchen-tables-nobg-shadow.png" />
+			<!--<img class="knife-long" src="../img/knife-47920-nobg.png" />-->
+		</div>
+	</div>
+
+	<section id="ts-1" class="title-separator">
+	   <div class="col-lg-12 text-center">
+		 		<h1>What about something to cook with?</h1>
+	   </div>
+	 </section>
+	 
+	 <div class="col-lg-12">
+			<div class="row">
+				<!-- carousel -->
+				<div id="carousel-example-generic" class="carousel slide bs-docs-carousel-example">
+					<div class="carousel-logo"></div>
+					<ol class="carousel-indicators">				
+						<li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+						<li data-target="#carousel-example-generic" data-slide-to="3" class=""></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="item active">
+							<div class="fill" style="background-image:url('../img/vegetables-optimized.jpg');">
+								<div class="container">
+									<div class="carousel-caption">						
+										<div class="carousel-info">
+											<h1>Vegetables</h1>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="fill" style="background-image:url('../img/meat-proteins-optimized.jpg');">
+								<div class="container">
+									<div class="carousel-caption">						
+										<div class="carousel-info">
+											<h1>Proteins</h1>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="fill" style="background-image:url('../img/knifes-optimized.jpg');">
+								<div class="container">
+									<div class="carousel-caption">						
+										<div class="carousel-info">
+											<h1>Our knifes</h1>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="fill" style="background-image:url('../img/vital_ingredients_artwork-copy1-optimized.jpg');">
+								<div class="container">
+									<div class="carousel-caption">
+										<div class="carousel-info">
+											<h1>Fooooooood!!!!!</h1>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+						<span class="icon-prev"></span>
+					</a>
+					<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+						<span class="icon-next"></span>
+					</a>
+				</div>
+				<!-- /carousel -->
+			</div>
+	 </div>
+		 
+	 <section id="ts-2" class="title-separator">
+	   <div class="col-lg-12 text-center">
+		 		<h1>Anything you wanna add?</h1>
+	   </div>
+	 </section>
+
+	  <!-- FOOTER -->
+	<div class="container marketing">
+	  <footer>
+				<p class="pull-right"><a href="#">Back to top</a></p>
+				<p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+	  </footer>
+	</div>
+		 
+ </div>
+ <!-- /#page-content -->
+
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <!-- <script src="../../dist/js/bootstrap.min.js"></script> -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <!--<script src="js/docs.min.js"></script>-->
+	<script src="../js/offcanvas-left-menu.js"></script>
+  <script src="../js/about.js"></script>
+  </body>
+</html>
