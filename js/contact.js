@@ -1,13 +1,13 @@
 $(document).ready(function($) {
 	// init controller
-	var controller1 = new ScrollMagic({globalSceneOptions: {triggerHook: "onEnter", duration: $(window).height()*2}});
+	var controller = new ScrollMagic({globalSceneOptions: {triggerHook: "onEnter", duration: $(window).height()*2}});
 
 	// build scenes
 	new ScrollScene({triggerElement: "#parallax1"})
 				.setTween(TweenMax.from("#parallax1 > div", 1, {top: "-80%", ease: Linear.easeNone}))
-				.addTo(controller1)
-				.addIndicators({zindex: 1, suffix: "1"});;
-  
+				.addTo(controller)
+				.addIndicators({zindex: 1, suffix: "1"});
+	
 	controller = new ScrollMagic();
 
 	var sceneOptions = {duration: 200, offset: -100};
