@@ -26,14 +26,14 @@ $(document).ready(function($) {
 		.addTo(controller)
 		.triggerHook("onCenter")
 		.triggerElement("#ts-1")
-		.setTween(TweenMax.from("#ts-1", 1, {autoAlpha: 0}))
-		.addIndicators({zindex: 2, suffix: "1"});
+		.setTween(TweenMax.from("#ts-1", 1, {autoAlpha: 0}));
+		// .addIndicators({zindex: 2, suffix: "1"});
 	
 	// fade
 	new ScrollScene(sceneOptions)
 		.addTo(controller)
 		.triggerHook("onCenter")
 		.triggerElement("#ts-2")
-		.setTween(TweenMax.from("#ts-2", 1, {autoAlpha: 0}))
-		.addIndicators({zindex: 2, suffix: "2"});
+		.setTween(TweenMax.from("#ts-2", 1, {autoAlpha: 0}));
+		// .addIndicators({zindex: 2, suffix: "2"});
 });
