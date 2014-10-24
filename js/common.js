@@ -19,5 +19,5 @@ $(function ($) {
 		}
 	});
 	
-	
-})
+	// Anything else, could be added here
+});

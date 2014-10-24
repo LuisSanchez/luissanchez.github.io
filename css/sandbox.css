@@ -16,11 +16,8 @@ body {
 
 .title-separator {
  		height: 500px;
-		padding-top: 18%;
-}
-
-.title-separator > div > h1 {
- 	 	padding-bottom: 20%;
+		padding-top: 185px;
+		/*border: solid;*/
 }
 
 .cover-images {
@@ -36,7 +33,15 @@ body {
 		position: relative;
 		overflow: hidden;
 		height: 100vh;
-		width: 100vw;
+		/*width: 100vw;*/
+}
+
+@media (min-width: 1200px) {
+	#parallax1, 
+	#parallax2, 
+	#parallax3 {
+			height: 600px;
+	}
 }
 
 #parallax1 > div, 
@@ -101,4 +106,31 @@ body {
 footer {
 		padding-top: 40px;
 		padding-top: 20px;
+}
+
+
+/* stagger style controls */
+	
+#demo {
+  height:100%;
+  position:relative;
+}
+.box {
+  width:50px;
+  height:50px;
+  position:relative;
+  border-radius:6px;
+  margin-top:4px;
+  display:inline-block
+}
+
+.green{
+  background-color:#6fb936;
+}
+
+.orange {
+  background-color:#f38630;
+}
+.grey {
+  background-color:#989898;
 }
