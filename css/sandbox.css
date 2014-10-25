@@ -30,17 +30,17 @@ body {
 #parallax1, 
 #parallax2, 
 #parallax3 {
-		position: relative;
-		overflow: hidden;
-		height: 100vh;
-		/*width: 100vw;*/
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	/*width: 100vw;*/
 }
 
 @media (min-width: 1200px) {
 	#parallax1, 
 	#parallax2, 
 	#parallax3 {
-			height: 600px;
+		height: 600px;
 	}
 }
 
