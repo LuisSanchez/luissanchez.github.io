@@ -103,6 +103,41 @@ body {
 /* end carousel */
 
 
+/* CSS used here will be applied after bootstrap.css */
+.nutrition {
+	border: 2px #333 solid;
+  	border-radius: 30%;
+    padding: 0;
+	margin-top: 3px;
+}
+.nutrition > h5 {
+	background-color: #333;
+    color: #fff;
+  	border-top-left-radius: 38%;
+    border-top-right-radius: 38%;
+  	margin: 0;
+  	margin-top: -1px;
+  	padding: 14px 5px;
+}
+.row.nutrition-table  > .col-md-1{
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+@media (max-width: 768px){
+	.row.nutrition-table > .col-md-1 {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.nutrition > h5 {
+		padding: 8px 0;
+		font-size: 0.7em;
+	}
+	.nutrition > h4 {
+		font-size: 0.6em;
+	}
+}
+
 footer {
 		padding-top: 40px;
 		padding-top: 20px;
