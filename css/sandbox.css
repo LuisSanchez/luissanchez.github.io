@@ -104,6 +104,16 @@ body {
 
 
 /* CSS used here will be applied after bootstrap.css */
+
+.col-custom-8 {
+	width: 10%;
+	float: left;
+	margin: auto 1%;
+}
+
+.nutrition-table {
+}
+
 .nutrition {
 	border: 2px #333 solid;
   	border-radius: 30%;
@@ -119,22 +129,18 @@ body {
   	margin-top: -1px;
   	padding: 14px 5px;
 }
-.row.nutrition-table  > .col-md-1{
-	padding-left: 1px;
-	padding-right: 1px;
+
+.miscelaneos-table {
+	margin-top: 10px;
 }
 
-@media (max-width: 768px){
-	.row.nutrition-table > .col-md-1 {
-		padding-left: 5px;
-		padding-right: 5px;
-	}
+@media (max-width: 400px){
 	.nutrition > h5 {
 		padding: 8px 0;
-		font-size: 0.7em;
+		font-size: 0.9em;
 	}
 	.nutrition > h4 {
-		font-size: 0.6em;
+		font-size: 0.9em;
 	}
 }
 
