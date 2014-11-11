@@ -7,7 +7,7 @@ body {
     color: #fff;
     box-shadow: inset 0 0 100px rgba(0,0,0,.5);
     background-color: transparent;
-    background: url(../img/Wood-Backgrounds-Picture.jpg) no-repeat center center fixed;
+    background: url('../img/Wood-Backgrounds-Picture.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -27,23 +27,22 @@ body {
     background-size: cover;
 }
 
+
+/* PARALLAX */
 #parallax1, 
 #parallax2, 
 #parallax3 {
 	position: relative;
 	overflow: hidden;
-	height: 100vh;
-	/*width: 100vw;*/
+    height: 50vh;
 }
-
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
 	#parallax1, 
 	#parallax2, 
 	#parallax3 {
-		height: 600px;
+		height: 50vh;
 	}
-}
-
+}*/
 #parallax1 > div, 
 #parallax2 > div, 
 #parallax3 > div {
@@ -53,16 +52,53 @@ body {
 		-webkit-backface-visibility: hidden;
 		-webkit-perspective: 1000;
 }
-	
+section#parallax {
+  height: 60vh;
+}
+#parallax {
+  position: relative;
+  overflow: hidden;
+}
+#parallax h3 {
+  font-size: 80px;
+  text-align: center;
+  margin: -40px 0 0 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  line-height: 80px;
+}
+#parallax #parallaxbg {
+  position: absolute;
+  height: 300px;
+  top: 50%;
+  width: 100%;
+  margin-top: -150px;
+  background-image: url("../img/example_parallax_bg3.png");
+}
+#parallaxbg .top {
+  height: 10px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-image: url("../img/demo_parallax_shadow_top.png");
+}
+#parallaxbg .bottom {
+  height: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-image: url("../img/demo_parallax_shadow_bottom.png");
+}	
 .knife-long {
 		position: absolute;
 		width: 50%;
 }
-
 #wood-table {
 		position: absolute;
 		width: 50%;
 }
+
 
 /* carousel */
 .fill {
