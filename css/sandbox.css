@@ -74,7 +74,7 @@ section#parallax {
   top: 50%;
   width: 100%;
   margin-top: -150px;
-  background-image: url("../img/example_parallax_bg3.png");
+  background-image: url("../img/geometry.png");
 }
 #parallaxbg .top {
   height: 10px;
