@@ -1,0 +1,3 @@
+http://janpaepke.github.io/ScrollMagic/examples/expert/manipulating_tweens.html
+http://greensock.com/docs/#/HTML5/GSAP/TweenMax/staggerFromTo/
+https://github.com/alvarotrigo/pagePiling.js
