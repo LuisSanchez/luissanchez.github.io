@@ -12,7 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <!-- <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="../css/social-buttons-colored.css" rel="stylesheet">
 		
@@ -41,6 +41,7 @@
   	<script type="text/javascript" src="../js/mobile/iscroll-probe.js"></script>
   	<script type="text/javascript" src="../js/jquery.scrollmagic.min.js"></script>
     <script type="text/javascript" src="../js/jquery.scrollmagic.debug.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
   </head>
 
   <body>
@@ -66,10 +67,15 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Food <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="food/beef-wellington.html">Beef Wellington</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
                 <li><a href="single-page.html">Single page</a></li>
                 <li class="divider"></li>
                 <li class="dropdown-header">Nav header</li>
-                <li><a href="#">More stuff</a></li>
+                <li><a href="ux-infography.html">An UX Infography</a></li>
               </ul>
             </li>
           </ul>
@@ -105,30 +111,24 @@
 					<strong>Where do I live?</strong><br>
 					On Earth<br>
 					South America<br>
-					Chile, Santiago<br>
+					Santiago, Chile<br>
 					<abbr title="Phone">P:</abbr> (123) 456-7890
 				</address>
 
-				<h3>Wanna check more about me?</h3>
-				<ul>
-					<li><a href="https://www.linkedin.com/pub/luis-manuel-s%C3%A1nchez-m%C3%A1rquez/49/422/788">Linkedin Profile</a></li>
-					<li><a href="http://careers.stackoverflow.com/luissanchez">StackOverflow Carrers</a></li>
-					<li><a href="http://stackoverflow.com/users/884784/luis">StackOverflow Profile</a></li>
-				</ul>
-
-				<!--<address>
+				<!-- <address>
 					<strong>Luis Sánchez</strong><br>
 					<a href="mailto:#">first.last@domain.com</a>
-				</address>-->
+				</address> -->
 
 			</div>
 	</div><!-- /.container -->
 
 	 <div class="container-fluid">
-		 <div	class="row">
+		 <div class="row">
+		 	<div id="map-canvas"></div>
 			 <section class="title-separator">
 				 <div class="col-lg-12 text-center">
-						<h1 id="ts-1">My new home city...</h1>
+					<h1 id="ts-1">My new home city...</h1>
 				 </div>
 			 </section>
 
@@ -138,26 +138,45 @@
 
 			 <section class="title-separator">
 				 <div class="col-lg-12 text-center">
-						<h1 id="ts-2">Tell me what you think!</h1>
+					<h1 id="ts-2">Tell me what you think!</h1>
 				 </div>
 			 </section>
 		 </div>
 	 </div>
 	 
-	 <div class="container">
-		 <!-- FOOTER -->
+	 <!-- FOOTER -->
+	 <div class="container-fluid">
+	 	<div class="row">
 			<footer>
-				<ul class="social-icons icon-flat icon-zoom list-unstyled list-inline">
-					<li><a href="https://www.linkedin.com/pub/luis-manuel-s%C3%A1nchez-m%C3%A1rquez/49/422/788"><i class="fa fa-linkedin"></i></a></li>
-					<li><a href="https://twitter.com/luissanchezm86"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="https://github.com/LuisSanchez/luissanchez.github.io"><i class="fa fa-github"></i></a></li>
-					<li><a href="http://careers.stackoverflow.com/luissanchez"><i class="fa fa-stack-overflow"></i></a></li>
-				</ul>
-				<p class="pull-right"><a href="#page-content">Back to top</a></p>
-				<p>Luis Sánchez - 2014</p>
+				<div class="container">
+					<div class="social-icons icon-flat icon-zoom col-lg-12">
+						<div class="col-lg-3">
+							<a href="https://www.linkedin.com/pub/luis-manuel-s%C3%A1nchez-m%C3%A1rquez/49/422/788"><i class="fa fa-linkedin"></i></a>
+							<h5>Stack Overflow</h5>
+						</div>
+						<div class="col-lg-3">
+							<a href="https://twitter.com/luissanchezm86"><i class="fa fa-twitter"></i></a>
+							<h5>Twitter</h5>
+						</div>
+						<div class="col-lg-3">
+							<a href="https://github.com/LuisSanchez/luissanchez.github.io"><i class="fa fa-github"></i></a>
+							<h5>GitHub</h5>
+						</div>
+						<div class="col-lg-3">
+							<a href="http://careers.stackoverflow.com/luissanchez"><i class="fa fa-stack-overflow"></i></a>
+							<h5>Carrers Stack Overflow</h5>
+						</div>
+					</div>
+
+					<div class="col-lg-12">
+						<span class="pull-right"><a href="#page-content">Back to top</a></span>
+						<span class="self-name">Luis Sánchez - 2015</span>
+					</div>
+				</div>
 			</footer>
 		</div>
-		 	
+	</div> <!-- End footer -->
+
  </div> <!-- /#page-content -->
 
 

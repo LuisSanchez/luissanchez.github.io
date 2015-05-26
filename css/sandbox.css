@@ -34,7 +34,7 @@ body {
 #parallax3 {
 	position: relative;
 	overflow: hidden;
-    height: 50vh;
+    height: 70vh;
 }
 /*@media (min-width: 1200px) {
 	#parallax1, 
@@ -181,10 +181,19 @@ section#parallax {
 }
 
 footer {
-		padding-top: 40px;
-		padding-top: 20px;
+	padding-top: 40px;
+    padding-bottom: 20px;
+    background-color: #333;
 }
 
+footer .self-name {
+    color: #FFF;
+    float: left;
+}
+
+blockquote footer {
+    background-color: #fff;
+}
 
 /* stagger style controls */
 	
@@ -210,4 +219,13 @@ footer {
 }
 .grey {
   background-color:#989898;
+}
+
+#map-canvas {
+  height: 500px;
+}
+
+.social-icons {
+    text-align: center;
+    color: #FFF;
 }
