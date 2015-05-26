@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="ISO-8859-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">-->
+		
+    <title>Cooperativa de Hangares</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"> -->
+		<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+		
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+		<link href="css/custom.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+			<img src="images/logo.png" alt="Cooperativa"/>
+  		  </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class=""><a href="../index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Proyectos <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="views/barcelona.html">Barcelona</a></li>
+                <li><a href="views/higuerote.html">Higuerote</a></li>
+                <li><a href="views/valencia.html">Valencia</a></li>
+                <li><a href="views/margarita.html">Margarita</a></li>
+                <li><a href="views/inter-barcelona.html">Aeropuerto Inter Barcelona</a></li>
+				<li><a href="views/proyectos.html">Ver Todos</a></li>
+              </ul>
+            </li>
+			<li><a href="#about">Noticias</a></li>
+            <li><a href="views/conocenos.html">Conócenos</a></li>
+			<li><a id="btn-contact" data-toggle="modal" data-target="#contact-modal" href="#">Contacto</a></li>
+          </ul>
+          <!--<ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Default</a></li>
+            <li class="active"><a href="./">Static top</a></li>
+            <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+          </ul>-->
+        </div><!--/.nav-collapse -->      
+    </div>
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <!-- Carousel
+    ================================================== -->
+    
+    <div class="container fill">
+			<div id="myCarousel" class="carousel slide">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+					<li data-target="#myCarousel" data-slide-to="3"></li>
+					<li data-target="#myCarousel" data-slide-to="4"></li>
+				</ol>
+				  <div class="carousel-inner">
+				    <div class="active item">
+				      <div class="fill" style="background-image:url('images/terminal-valencia-carousel-optimized.jpg');">
+				        <div class="container">
+				          <div class="carousel-caption">
+										<div class="inner-carousel-caption">
+											<h1>Terminal de Valencia</h1>
+											<p>Terminal de aviación general de Valencia. Fotos de muestra preliminares. Para mayor detalle, por favor, ingrese en proyectos o envíe un correo a través de contacto.</p>
+											<!-- <p><a class="btn btn-large btn-default" href="#">Más Info...</a></p> -->
+										</div>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+				    <div class="item">
+				      <div class="fill" style="background-image:url('images/higuerote-6-carousel-optimized.jpg');">
+				        <div class="container">
+				          <div class="carousel-caption">
+										<div class="inner-carousel-caption">
+											<h1>Terminal de Higuerote</h1>
+											<p>Terminal de aviación general de Higuerote. Fotos de muestra preliminares. Para mayor detalle, por favor, ingrese en proyectos o envíe un correo a través de contacto.</p>
+											<!-- <p><a class="btn btn-large btn-default" href="#">Más Info...</a></p> -->
+										</div>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+				    <div class="item">
+				      <div class="fill" style="background-image:url('images/hangar-final-5-carousel-optimized.jpg');">
+				        <div class="container">
+				          <div class="carousel-caption">
+										<div class="inner-carousel-caption">
+											<h1>Terminal Inter-Barcelona</h1>
+											<p>Terminal de aviación general de Inter-Barcelona. Fotos de muestra preliminares. Para mayor detalle, por favor, ingrese en proyectos o envíe un correo a través de contacto.</p>
+											<!-- <p><a class="btn btn-large btn-default" href="#">Más Info...</a></p> -->
+										</div>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+				    <div class="item">
+				      <div class="fill" style="background-image:url('images/hangar-margarita-final-6x-carousel-optimized.jpg');">
+				        <div class="container">
+				          <div class="carousel-caption">
+										<div class="inner-carousel-caption">
+											<h1>Terminal de Margarita</h1>
+											<p>Terminal de aviación general de Margarita. Fotos de muestra preliminares. Para mayor detalle, por favor, ingrese en proyectos o envíe un correo a través de contacto.</p>
+											<!-- <p><a class="btn btn-large btn-default" href="#">Más Info...</a></p> -->
+										</div>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+				    <div class="item">
+				      <div class="fill" style="background-image:url('images/remodelacion-terminal-carousel-optimized.jpg');">
+				        <div class="container">
+				          <div class="carousel-caption">
+										<div class="inner-carousel-caption">
+											<h1>Terminal de Barcelona</h1>
+											<p>Terminal de aviación general de Barcelona. Fotos de muestra preliminares. Para mayor detalle, por favor, ingrese en proyectos o envíe un correo a través de contacto.</p>
+											<!-- <p><a class="btn btn-large btn-default" href="#">Más Info...</a></p> -->
+										</div>
+			            </div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="pull-center">
+						<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		      	  <span class="glyphicon glyphicon-chevron-left"></span></a>
+		        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+		      	  <span class="glyphicon glyphicon-chevron-right"></span></a>
+				  </div>
+				</div><!-- /.carousel -->
+		</div>
+	
+
+	<div class="cooperativa-body">
+		<div class="row">			
+			<div class="col-xs-12 col-sm-6">
+				<div class="info-container">
+					<div class="info-layer">
+					  <h2>¿Quiénes somos?</h2>
+					  <!--<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>-->
+					  <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
+					</div>
+					<a href="views/conocenos.html">
+						<img src="images/a3.jpg" alt="¿Quiénes somos?">
+					</a>
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-sm-6">
+			  <div class="info-container">
+					<div class="info-layer info-layer-gray">
+					  <h2>Nuestros Proyectos</h2>
+					  <!--<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>-->
+					  <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
+					</div>
+					<a href="views/proyectos.html">
+						<img src="images/a1.jpg" alt="Nuestros Proyectos">
+					</a>
+				</div>
+		   </div>
+		</div>
+		  
+		  <div class="row">
+			<div class="col-md-3">
+				<div class="info-container">
+					<div class="info-layer">
+					  <h2>Conócenos</h2>
+					  <!--<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>-->
+					  <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
+					</div>
+					<a href="views/conocenos.html">
+						<img src="images/a0.jpg" alt="Conócenos">
+					</a>
+				</div>
+			</div>
+			
+			<div class="col-md-6">
+			  <div class="info-container">
+					<div class="info-layer info-layer-gray">
+					  <h2>Virtual Tour</h2>
+					  <!--<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>-->
+					  <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
+					</div>
+					<img src="images/a2.jpg" alt="Virtual Tour">
+				</div>
+		   </div>
+		   
+			<div id="contact" class="col-md-3">
+				<div class="info-container">
+					<div class="info-layer">
+					  <h2>Contáctenos</h2>
+					  <!--<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>-->
+					  <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>-->
+					</div>
+					<a data-toggle="modal" data-target="#contact-modal" href="#">
+						<img src="images/a0.jpg" alt="Contáctenos">
+					</a>
+				</div>
+			</div>
+		  </div>
+	</div>
+	
+	<footer>
+    <img src="images/logo-inverse.png" alt="Cooperativa"/>
+  </footer>
+	  
+  <!-- Modals
+  ================================================== -->	
+	<div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Solicitar informacion de contacto</h4>
+				</div>
+				<div class="modal-body">
+					<div class="alert">
+						<p id="message-container"></p>
+					</div>
+					<form role="form" action="backend/sendEmail.php">
+						<div class="form-group"> 
+							<label for="req-name">Tu nombre:</label>
+							<input type="text" id="req-name" name="req-name" class="form-control" required minlength="2" value="" />
+						</div>
+						<div class="form-group">
+							<label for="req-email">Correo electrónico:</label>
+							<input type="email" name="req-email" class="form-control" required value="" />
+						</div>
+						<div  class="form-group">
+							<select name="subject" class="form-control"required>
+								<option value="">Asunto:</option>
+								<option value="Requerimiento">Requerimiento</option>
+								<option value="Información de ventas">Información de ventas</option>
+								<option value="Soporte">Soporte</option>
+							</select>
+						</div>
+						<div  class="form-group">
+							  <label for="newText">Contenido:</label>
+							  <textarea class="form-control" cols="40" rows="8" name="newText" minlength="2" required></textarea>
+						</div>
+						
+						<input type="submit" class="btn btn-primary" value="Enviar Correo" />
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+					<!--<button type="button" class="btn btn-primary">Save changes</button>-->
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/index.min.js"></script>
+  </body>
+</html>
