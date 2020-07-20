@@ -417,7 +417,7 @@ a:focus, a:active {
 }
 
 .section {
-  padding: 30px 0;
+  padding: 30px 0 0;
   position: relative;
   background-color: #FFFFFF;
 }
@@ -596,7 +596,7 @@ a:focus, a:active {
   font-size: 16px;
 }
 .footer:not(.footer-big) nav > ul li {
-  margin-left: 20px;
+  /* margin-left: 20px; */
   float: left;
 }
 .footer:not(.footer-big) nav > ul a {
@@ -750,7 +750,7 @@ a:focus, a:active {
   left: auto;
 }
 .landing-page .section-clients {
-  padding: 50px 0;
+  padding: 50px 0 15px 0;
 }
 .landing-page .section-clients .info .icon {
   background: transparent;
@@ -1093,14 +1093,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
     overflow: hidden;
     width: 100%;
     min-height: 600px;
-    margin-top: 30px;
+    /* margin-top: 30px; */
    }
 
    .landing-page .section-presentation img{
     position: absolute;
-    top: 0;
+    top: 100px;
     left: 0;
-    height: 600px;
+    height: 475px;
    }
 
    .landing-page .section-presentation .iphone-presentation {
@@ -1148,7 +1148,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
    }
 
    .landing-page .section-demo{
-    margin-top: 50px;
+    /* margin-top: 50px; */
    }
 
    .landing-page .section-demo a{
@@ -1168,7 +1168,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
    }
 
    .landing-page .section-demo .row:first-child{
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
    }
 
    .landing-page .section-demo .carousel-inner{
@@ -1706,6 +1706,39 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
 #description-carousel {
   margin-top: 60px;
 }
-.skills-image {
-  margin-top: 30px;
+.btn-github {
+  color: #000;
 }
+.btn-linkedin {
+  color: #0077b5;
+}
+.skills-img-wrapper { 
+  text-align: center;
+}
+@media (max-width:1024px) {
+  .landing-page .section-presentation img {
+    position: relative;
+    top: 200px;
+    left: 0;
+    height: 325px;
+  }
+}
+@media (max-width:768px) {
+  #description-carousel {
+    margin-top: -45px;
+    padding-bottom: 20px;
+  }
+  .landing-page .section-demo .row:first-child {
+    margin-bottom: 0;
+  }
+  .landing-page .section-presentation img {
+    position: relative;
+    top: 10px;
+    margin-top: 10px;
+    height: 275px;
+  }
+  .landing-page .section-demo{
+    margin-top: 50px;
+   }
+}
+
