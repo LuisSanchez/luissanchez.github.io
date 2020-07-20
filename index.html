@@ -1,225 +1,407 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!--<link rel="icon" href="../../favicon.ico">-->
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/png" href="assets/img/icon.png">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>Luis Sánchez - Senior Software Engineer</title>
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+        <meta name="viewport" content="width=device-width" />
 
-    <title>Sandbox</title>
+        <link href="assets/css/bootstrap.css" rel="stylesheet" />
+        <link href="assets/css/landing-page.css" rel="stylesheet"/>
 
-    <!-- Bootstrap core CSS -->
-    <!-- <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-		<link href="css/social-buttons-colored.css" rel="stylesheet">
+        <!--     Fonts and icons     -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
+        <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 
-    <!-- Custom styles for this template -->
-    <link href="css/offcanvas-left-menu.css" rel="stylesheet">
-    <link href="css/sandbox.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <!-- <script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-      
-    <script type="text/javascript" src="js/dependent/greensock/TweenMax.min.js"></script>
-	  <script type="text/javascript" src="js/dependent/greensock/plugins/ScrollToPlugin.min.js"></script>
-	  <!--<script type="text/javascript" src="js/_dependent/jquery.min.js"></script>-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  	<script type="text/javascript" src="js/examples/modernizr.custom.min.js"></script>
-  	<script type="text/javascript" src="js/mobile/iscroll-probe.js"></script>
-  	<script type="text/javascript" src="js/jquery.scrollmagic.min.js"></script>
-    <script type="text/javascript" src="js/jquery.scrollmagic.debug.js"></script>
-  </head>
-
-  <body>
-
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="slide-nav">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-toggle"> 
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="navbar-brand" href="#">Sandbox</a>
-        </div>
-        <div id="slidemenu">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="view/about.html">About</a></li>
-            <li><a href="view/contact.html">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Food <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="view/food/beef-wellington.html">Beef Wellington</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="view/single-page.html">Canada One Page</a></li>
-                <li><a href="demo-sites/index.html">Cooperativa de Hangares</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="view/ux-infography.html">An UX Infography</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Hello!</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div><!--navbar-->
-
-      
-  <!--wrap the page content do not style this-->
- <div id="page-content">
-    
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <section id="intro">
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Just a bored guy...</h1>
-        <p>This page is made in order to test new frameworks, new snippets, new technologies and maybe developing a new ones!</p>
-        <!--<p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>-->
-      </div>
-    </div>
-  </section>
-     
-  <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4 col-md-4">
-          <img class="img-responsive" src="img/cupcake-1.png" alt="Cupcake" style="height: 140px;">
-          <h2>Cupcake!</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-				
-        <div class="col-lg-4 col-md-4">
-          <img class="img-responsive" src="img/cupcake-2.png" alt="Cupcake" style="height: 140px;">
-          <h2>Cupcake!</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-				
-        <div class="col-lg-4 col-md-4">
-          <img class="img-responsive" src="img/cupcake-3.png" alt="Cupcake" style="height: 140px;">
-          <h2>Cupcake!</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
-
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette featurette-1">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Beef Wellington. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Gordon Ramsay's version of the classic steak dish - a show-stopping centrepiece on a special occasion.</p>
-					<p><a class="btn btn-default" href="view/food/beef-wellington.html" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" src="img/beef-wellington.jpg" alt="Beef Wellington">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette featurette-2">
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" src="img/eggs-benedict.jpg" alt="Generic placeholder image">
-        </div>
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">Eggs Benedict.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette featurette-3">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">Pan Roasted <span class="text-muted">Salmon</span> with Wild Mushrooms</h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" src="img/pan-roasted-salmon.jpg" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-      <!-- /END THE FEATURETTES -->
-		</div><!-- /.container --> 
-
-
-   <!-- FOOTER -->
-   <div class="container-fluid">
-    <div class="row">
-      <footer>
-        <div class="container">
-          <div class="social-icons icon-flat icon-zoom col-lg-12">
-            <div class="col-lg-3">
-              <a href="https://www.linkedin.com/pub/luis-manuel-s%C3%A1nchez-m%C3%A1rquez/49/422/788"><i class="fa fa-linkedin"></i></a>
-              <h5>Stack Overflow</h5>
+    </head>
+    <body class="landing-page landing-page1">
+        <nav class="navbar navbar-transparent navbar-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar bar1"></span>
+                    <span class="icon-bar bar2"></span>
+                    <span class="icon-bar bar3"></span>
+                    </button>
+                    <a href="https://stackoverflow.com/story/luissanchez%20">
+                        <div class="logo-container">
+                            <div class="logo">
+                                <img src="assets/img/self-1.jpeg" alt="Luis Sánchez">
+                            </div>
+                            <div class="brand">
+                                Luis Sánchez
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="example" >
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="https://www.linkedin.com/in/luis-manuel-s%25C3%25A1nchez-m%25C3%25A1rquez-78842249/">
+                            <i class="fa fa-linkedin-square"></i>
+                            LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/luissanchezm86">
+                            <i class="fa fa-twitter"></i>
+                            Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/LuisSanchez">
+                            <i class="fa fa-github-square"></i>
+                            GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
             </div>
-            <div class="col-lg-3">
-              <a href="https://twitter.com/luissanchezm86"><i class="fa fa-twitter"></i></a>
-              <h5>Twitter</h5>
-            </div>
-            <div class="col-lg-3">
-              <a href="https://github.com/LuisSanchez/luissanchez.github.io"><i class="fa fa-github"></i></a>
-              <h5>GitHub</h5>
-            </div>
-            <div class="col-lg-3">
-              <a href="http://careers.stackoverflow.com/luissanchez"><i class="fa fa-stack-overflow"></i></a>
-              <h5>Carrers Stack Overflow</h5>
-            </div>
-          </div>
+        </nav>
 
-          <div class="col-lg-12">
-            <span class="pull-right"><a href="#page-content">Back to top</a></span>
-            <span class="self-name">Luis Sánchez - 2015</span>
-          </div>
+        <div class="wrapper">
+            <div class="parallax filter-gradient blue" data-color="blue">
+                <div class="parallax-background">
+                    <img class="parallax-background-image" src="assets/img/template/bg3.jpg">
+                </div>
+                <div class= "container">
+                    <div class="row">
+                        <div class="col-md-5 hidden-xs">
+                            <div class="parallax-image">
+                                <img class="phone" src="assets/img/template/main-image-2.jpg" style="margin-top: 20px"/>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-md-offset-1">
+                            <div class="description">
+                                <h2>Welcome!</h2>
+                                <br>
+                                <h5>Creative Senior Software Engineer offering 8+ years of experience successful
+                                    completing simultaneous projects. Enthusiastic about developing
+                                    forward-thinking solutions to tomorrow's productivity problems.
+                                    Resourceful and adaptable approach to challenges. Decisive leader and
+                                    reliable team builder with results-focused and driven approach.</h5>
+                            </div>
+                            <!-- <div class="buttons">
+                                <button class="btn btn-fill btn-neutral">
+                                <i class="fa fa-apple"></i>
+                                </button>
+                                <button class="btn btn-simple btn-neutral">
+                                <i class="fa fa-android"></i>
+                                </button>
+                                <button class="btn btn-simple btn-neutral">
+                                <i class="fa fa-windows"></i>
+                                </button>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section section-clients">
+                <div class="container text-center">
+                    <h4 class="header-text">A team player!</h4>
+                    <p>
+                        Hardworking software development professional driven to increase team effectiveness. 
+                        Focused on usability and performance improvements. Proven history of developing useful, 
+                        efficient and cost-effective projects.
+                    </p>
+                    <div class="logos">
+                        <ul class="list-unstyled">
+                            <li ><img src="assets/img/logos/csharp.jpeg"/></li>
+                            <li ><img src="assets/img/logos/xamarin.png"/></li>
+                            <li ><img src="assets/img/logos/dotnetcore.png"/></i>
+                            <li ><img src="assets/img/logos/docker.png"/></li>
+                            <li ><img src="assets/img/logos/azure.png"/></li>
+                            <li ><img src="assets/img/logos/python.jpeg"/></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section section-demo">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div id="description-carousel" class="carousel fade" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="assets/img/template/examples/azure.png" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img src="assets/img/template/examples/docker.png" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img src="assets/img/template/examples/dotnetcore.png" alt="">
+                                    </div>
+                                </div>
+                                <ol class="carousel-indicators carousel-indicators-blue">
+                                    <li data-target="#description-carousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#description-carousel" data-slide-to="1" class=""></li>
+                                    <li data-target="#description-carousel" data-slide-to="2" class=""></li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-offset-1">
+                            <h4 class="header-text">Always learning</h4>
+                            <p>
+                                With the new technologies at our door, we have to keep moving and learning all the time. 
+                                This little experiment implements a simple Web API using .NET Core 3.1 with an Alpine base image that makes a connection to a 
+                                SQL Server database in Azure. The images resides on docker hub and its build with every push on the github repository. 
+                                Finally, this solution is possible using Azure Containers.
+                            </p>
+
+                            <button type="button" id="container-test" class="btn btn-fill btn-info">Make request</button>
+                            <p></p>
+                            <a href="https://hub.docker.com/u/luissanchezm86">Here is my docker hub image (yes, its public!)</a>
+                            <p></p>
+                            <a href="https://github.com/LuisSanchez/WebApi-Core-3.0-Boilerplate">Here is the code on GitHub (also public!)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section section-presentation">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="description">
+                                <h4 class="header-text">Skills</h4>
+                                <p>A little bit of humor is always important, that being said, lets talk about my skills.</p>
+
+                                <div class="col-sm-12">
+                                    <h5>.NET C#, EF, Web API, MVC</h5>
+                                    <div class="" style="width:100%;">
+                                        <div class="progress" style="height:9px; margin:8px 0;">
+                                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5" style="width: 100%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h5>Team Work</h5>
+                                    <div class="" style="width:100%;">
+                                        <div class="progress" style="height:9px; margin:8px 0;">
+                                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="5" style="width: 100%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h5>ASP.NET Identity, Identity Server</h5>
+                                    <div class="" style="width:100%;">
+                                        <div class="progress" style="height:9px; margin:8px 0;">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h5>Microservices architecture</h5>
+                                    <div class="" style="width:100%;">
+                                        <div class="progress" style="height:9px; margin:8px 0;">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h5>CSS3, HTML, JavaScript</h5>
+                                    <div class="" style="width:100%;">
+                                        <div class="progress" style="height:9px; margin:8px 0;">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h5>PL/SQL and T-SQL</h5>
+                                    <div class="" style="width:100%;">
+                                        <div class="progress" style="height:9px; margin:8px 0;">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h5>Xamarin</h5>
+                                    <div class="" style="width:100%;">
+                                        <div class="progress" style="height:9px; margin:8px 0;">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5" style="width: 60%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h5>Google API and GCP</h5>
+                                    <div class="" style="width:100%;">
+                                        <div class="progress" style="height:9px; margin:8px 0;">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5" style="width: 60%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h5>Azure platform</h5>
+                                    <div class="" style="width:100%;">
+                                        <div class="progress" style="height:9px; margin:8px 0;">
+                                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="5" style="width: 60%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-offset-1 hidden-xs skills-image">
+                            <img src="assets/img/template/1.jpeg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <div class="section section-features">
+                <div class="container">
+                    <h4 class="header-text text-center">Features</h4>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card card-blue">
+                                <div class="icon">
+                                    <i class="pe-7s-note2"></i>
+                                </div>
+                                <div class="text">
+                                    <h4>Online Customers Management</h4>
+                                    <p>All appointments sync with your Google calendar so your availability is always up to date. See your schedule at a glance from any device.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card card-blue">
+                                <div class="icon">
+                                    <i class="pe-7s-bell"></i>
+                                </div>
+                                <h4>Smart Notifications on hands</h4>
+                                <p>Automatic text and email reminders make sure customers always remember their upcoming appointments.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card card-blue">
+                                <div class="icon">
+                                    <i class="pe-7s-graph1"></i>
+                                </div>
+                                <h4>Know your business better now</h4>
+                                <p>Take payments and run your business on the go, in your store and then see how it all adds up with analytics.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="section section-testimonial">
+                <div class="container">
+                    <h4 class="header-text text-center">A little bit more of me!</h4>
+                    <div id="carousel-example-generic" class="carousel fade" data-ride="carousel">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="mask">
+                                    <img src="assets/img/faces/self-1.jpeg">
+                                </div>
+                                <div class="carousel-testimonial-caption">
+                                    <p>Luis Sánchez</p>
+                                    <h3>"Don't Try to Be the Best. Just Be 1% Better Every Day!"</h3>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="mask">
+                                    <img src="assets/img/faces/self-2.jpg">
+                                </div>
+                                <div class="carousel-testimonial-caption">
+                                    <p>Me at the Atacama Challenger 2018</p>
+                                    <h3>"Why I'm I doing this? It's the Atacama Desert OMG!"</h3>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="mask">
+                                    <img src="assets/img/faces/bike-3.jpg">
+                                </div>
+                                <div class="carousel-testimonial-caption">
+                                    <p>Hopes and dreams!</p>
+                                    <h3>“Tension is who you think you should be. Relaxation is who you are.” - Chinese Proverb</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <ol class="carousel-indicators carousel-indicators-blue">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section section-no-padding">
+                <div class="parallax filter-gradient blue" data-color="blue">
+                    <div class="parallax-background">
+                        <img class ="parallax-background-image" src="assets/img/template/bg3.jpg"/>
+                    </div>
+                    <div class="info">
+                        <h1>Want to know more about my work?</h1>
+                        <p>Click on the button below to check my resume.</p>
+                        <a href="assets/files/Luis_Sánchez_-_Senior_Software_Engineer.pdf"  class="btn btn-neutral btn-lg btn-fill">Luis Sánchez CV</a>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="container">
+                    <nav class="pull-left">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://webapptestazureluisito.azurewebsites.net/">
+                                Web Site
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://stackoverflow.com/story/luissanchez%20">
+                                Portfolio
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="social-area pull-right">
+                        <a class="btn btn-social btn-linkedin btn-simple" href="https://www.linkedin.com/in/luis-manuel-s%25C3%25A1nchez-m%25C3%25A1rquez-78842249/">
+                        <i class="fa fa-linkedin-square"></i>
+                        </a>
+                        <a class="btn btn-social btn-twitter btn-simple" href="https://twitter.com/luissanchezm86">
+                        <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-social btn-github btn-simple" href="https://github.com/LuisSanchez">
+                        <i class="fa fa-github-square"></i>
+                        </a>
+                    </div>
+                    <div class="copyright">
+                        <a href="https://stackoverflow.com/story/luissanchez%20">Luis Sánchez</a>
+                    </div>
+                </div>
+            </footer>
         </div>
-      </footer>
-    </div>
-  </div> <!-- End footer -->
 
-   
- </div>
- <!-- /#page-content -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- <script src="../../dist/js/bootstrap.min.js"></script> -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-	<!--<script src="js/docs.min.js"></script>-->
-	<script src="js/offcanvas-left-menu.js"></script>
-	<script src="js/common.js"></script>
-	<script src="js/index.js"></script>
-  </body>
+    </body>
+    <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.js" type="text/javascript"></script>
+    <script src="assets/js/awesome-landing-page.js" type="text/javascript"></script>
 </html>
