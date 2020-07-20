@@ -1034,10 +1034,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
   padding: 5px;
 }
 
-.landing-page .section-presentation .description{
-  /* padding: 50px 5px 0; */
-}
-
 .landing-page .parallax .description h2{
   text-shadow: 0 1px 5px rgba(0,0,0,0.2);
   font-weight: 200;
@@ -1147,10 +1143,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
     padding: 14px 80px;
    }
 
-   .landing-page .section-demo{
-    /* margin-top: 50px; */
-   }
-
    .landing-page .section-demo a{
     margin-top: 20px;
    }
@@ -1165,10 +1157,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
     width: 100%;
     height: auto;
     border-radius: 10px;
-   }
-
-   .landing-page .section-demo .row:first-child{
-    /* margin-bottom: 100px; */
    }
 
    .landing-page .section-demo .carousel-inner{
@@ -1438,9 +1426,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
   padding: 0 15px;
 } 
 
-.fixed-plugin .adjustments-line p{
+.fixed-plugin .adjustments-line p {
     float: left;
-    display: inline-block;
+    /* display: inline-block; */
     margin-bottom: 0;
     font-size: 1em;
 }
@@ -1703,7 +1691,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
 
 
 .logos img {
-  width: 120px;
+  width: 115px;
 }
 #description-carousel {
   margin-top: 60px;
