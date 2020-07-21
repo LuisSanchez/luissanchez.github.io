@@ -32,7 +32,7 @@
                 redirect: 'follow'
               };
               
-              fetch("http://52.242.100.23/v1/addresses/?id=2", requestOptions)
+              fetch("http://address-test-luis.eastus2.azurecontainer.io/v1/addresses/?id=2", requestOptions)
                 .then(response => response.text())
                 .then(result => console.log(result))
                 .catch(error => console.log('error', error));
