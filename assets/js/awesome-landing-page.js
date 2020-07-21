@@ -33,8 +33,11 @@
               };
               
               fetch("http://address-test-luis.eastus2.azurecontainer.io/v1/addresses/?id=2", requestOptions)
-                .then(response => response.text())
-                .then(result => console.log(result))
+                .then(response => response.json())
+                .then(result => {
+                    console.log(result);
+                    document.getElementById("json-data-body").textContent = JSON.stringify(result, undefined, 2);
+                })
                 .catch(error => console.log('error', error));
         }
 
