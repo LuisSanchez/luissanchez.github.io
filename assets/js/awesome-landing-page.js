@@ -29,7 +29,7 @@
         function getAddress(e) {
             var requestOptions = {
                 method: 'GET',
-                credentials: 'same-origin', mode: 'no-cors'
+                redirect: 'follow'
               };
               
               fetch("http://52.242.100.23/v1/addresses/?id=2", requestOptions)
