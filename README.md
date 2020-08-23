@@ -1,4 +1,4 @@
-Sandbox
+Personal landing page
 =======
 
-This is a site to test and try multiple snippets and frameworks around the web.
+Simple repository to play with html and css. Also works as my personal landing page.
