@@ -24,6 +24,7 @@ $().ready(function () {
         }
     }
     $('#container-test').click(getAddress);
+    $('#json-data-body').hide();
 });
 
 function getAddress(e) {
@@ -32,13 +33,25 @@ function getAddress(e) {
         redirect: 'follow'
     };
 
+    $('#please-wait').show();
+    $('#json-data-body').hide();
+    let x = 'Please wait while we wake up the Azure App service and the Heroku Posgres database. Thank you!';
+    document.getElementById("please-wait").textContent = x;
+
     fetch("https://luissanchez.azurewebsites.net/v1/addresses/?id=2", requestOptions)
         .then(response => response.json())
         .then(result => {
-            console.log(result);
             document.getElementById("json-data-body").textContent = JSON.stringify(result, undefined, 2);
+            $('#please-wait').hide();
+            $('#json-data-body').show();
         })
-        .catch(error => console.log('error', error));
+        .catch((error) => {
+            let x = 'There has been an error, please try again later.'
+            document.getElementById("please-wait").textContent = x;
+            $('#please-wait').show();
+            $('#json-data-body').hide();
+            console.log('error', error);
+        });
 }
 
 $(window).on('scroll', function () {

@@ -171,23 +171,25 @@
                         </div>
                         <div class="col-md-5 col-md-offset-1">
                             <h4 class="header-text">Always learning</h4>
-                            <p>
+                            <!-- <p>
                                 With the new technologies at our door, we have to keep moving and learning all the time. 
-                                This little experiment implements a simple Web API using .NET Core 3.1 with an Alpine base image that makes a connection to a 
-                                SQL Server database in Azure. The images resides on docker hub and its build with every push on the github repository. 
-                                Finally, this solution is possible using Azure Containers.
+                            </p> -->
+                            <p>
+                                This little experiment makes a request to a simple Web API using .NET Core 3.1 hosted on Azure that has a connection to a 
+                                Postgres database on Heroku.
+                            </p>
+                            <p>
+                                The Web API image has an Alpine base to make it smaller. It resides on 
+                                <a href="https://hub.docker.com/r/luissanchezm86/addresstestalpinecore31" rel="noopener" target="_blank">my Docker Hub</a> 
+                                and it is build with every push on 
+                                <a href="https://github.com/LuisSanchez/WebApi-Core-3.0-Boilerplate" rel="noopener" target="_blank">my GitHub</a>
+                                repository.
                             </p>
 
                             <p class="text-center">
                                 <button type="button" id="container-test" class="btn btn-fill btn-info" data-toggle="modal" data-target="#json-data-modal">
                                     Make request</button>
                             </p>
-                            <p></p>
-                            <a href="https://hub.docker.com/u/luissanchezm86" rel="noopener" target="_blank">
-                                Here is my docker hub image (yes, it's public!)</a>
-                            <p></p>
-                            <a href="https://github.com/LuisSanchez/WebApi-Core-3.0-Boilerplate" rel="noopener" target="_blank">
-                                Here is the code on GitHub (also public!)</a>
                         </div>
                     </div>
                 </div>
@@ -429,9 +431,10 @@
             <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="json-data-modal-title">Azure Container Response</h4>
+                <h4 class="modal-title" id="json-data-modal-title">Experiment Request For an Address</h4>
             </div>
             <div class="modal-body">
+                <h5 id='please-wait' class="text-center"></h5>
                 <pre id="json-data-body"></pre>
             </div>
             <div class="modal-footer">
