@@ -12,116 +12,116 @@
  
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
-        var big_image;
-        $().ready(function() {
-            $('.selector').click(function() {
-                SelectColor(this);
-            });
-            var selectCol = 0;
-            if (selectCol == 0) {
-                if ($('body').hasClass('landing-page1')) {
+var big_image;
+$().ready(function () {
+    $('.selector').click(function () {
+        SelectColor(this);
+    });
+    var selectCol = 0;
+    if (selectCol == 0) {
+        if ($('body').hasClass('landing-page1')) {
 
-                }
-            }
-            $('#container-test').click(getAddress);
-        });
-
-        function getAddress(e) {
-            var requestOptions = {
-                method: 'GET',
-                redirect: 'follow'
-              };
-              
-              fetch("http://address-test-luis.eastus2.azurecontainer.io/v1/addresses/?id=2", requestOptions)
-                .then(response => response.json())
-                .then(result => {
-                    console.log(result);
-                    document.getElementById("json-data-body").textContent = JSON.stringify(result, undefined, 2);
-                })
-                .catch(error => console.log('error', error));
         }
+    }
+    $('#container-test').click(getAddress);
+});
 
-        $(window).on('scroll', function() {
-            responsive = $(window).width();
-            if (responsive >= 768) {
-                parallax();
-            }
-        });
+function getAddress(e) {
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+    };
 
-        function SelectColor(btn) {
-            oldColor = $('.filter-gradient').attr('data-color');
-            newColor = $(btn).attr('data-color');
+    fetch("https://luissanchez.azurewebsites.net/v1/addresses/?id=2", requestOptions)
+        .then(response => response.json())
+        .then(result => {
+            console.log(result);
+            document.getElementById("json-data-body").textContent = JSON.stringify(result, undefined, 2);
+        })
+        .catch(error => console.log('error', error));
+}
 
-            oldButton = $('a[id^="Demo"]').attr('data-button');
-            newButton = $(btn).attr('data-button');
+$(window).on('scroll', function () {
+    responsive = $(window).width();
+    if (responsive >= 768) {
+        parallax();
+    }
+});
 
-            $('.filter-gradient').removeClass(oldColor).addClass(newColor).attr('data-color', newColor);
+function SelectColor(btn) {
+    oldColor = $('.filter-gradient').attr('data-color');
+    newColor = $(btn).attr('data-color');
 
-            $('a[id^="Demo"]').removeClass("btn-" + oldButton).addClass("btn-" + newButton).attr('data-button', newButton);
+    oldButton = $('a[id^="Demo"]').attr('data-button');
+    newButton = $(btn).attr('data-button');
 
-            $('.carousel-indicators').removeClass("carousel-indicators-" + oldColor).addClass("carousel-indicators-" + newColor);
+    $('.filter-gradient').removeClass(oldColor).addClass(newColor).attr('data-color', newColor);
 
-            $('.card').removeClass("card-" + oldColor).addClass("card-" + newColor);
+    $('a[id^="Demo"]').removeClass("btn-" + oldButton).addClass("btn-" + newButton).attr('data-button', newButton);
 
-            $('.selector').removeClass('active');
-            $(btn).addClass('active');
+    $('.carousel-indicators').removeClass("carousel-indicators-" + oldColor).addClass("carousel-indicators-" + newColor);
+
+    $('.card').removeClass("card-" + oldColor).addClass("card-" + newColor);
+
+    $('.selector').removeClass('active');
+    $(btn).addClass('active');
+}
+
+$('.switch').each(function () {
+    var selector = $(this).parent('li')
+    $(this).click(function () {
+        if (selector.siblings().hasClass('active')) {
+            selector.addClass('active');
+            selector.siblings().removeClass('active');
+            var slide = $(this).attr('data-slide')
+            var lastClass = $('body').attr('class').split(' ').pop();
+            $('body').removeClass(lastClass);
+            $('body').addClass('landing-page' + slide);
         }
+    });
+});
 
-        $('.switch').each(function() {
-            var selector = $(this).parent('li')
-            $(this).click(function() {
-                if (selector.siblings().hasClass('active')) {
-                    selector.addClass('active');
-                    selector.siblings().removeClass('active');
-                    var slide = $(this).attr('data-slide')
-                    var lastClass = $('body').attr('class').split(' ').pop();
-                    $('body').removeClass(lastClass);
-                    $('body').addClass('landing-page' + slide);
-                }
-            });
-        });
+var parallax = debounce(function () {
+    no_of_elements = 0;
+    $('.parallax').each(function () {
+        var $elem = $(this);
 
-        var parallax = debounce(function() {
-            no_of_elements = 0;
-            $('.parallax').each(function() {
-                var $elem = $(this);
-
-                if (isElementInViewport($elem)) {
-                    var parent_top = $elem.offset().top;
-                    var window_bottom = $(window).scrollTop();
-                    var $image = $elem.find('.parallax-background-image')
-                    var $oVal = ((window_bottom - parent_top) / 3);
-                    $image.css('margin-top', $oVal + 'px');
-                }
-            });
-        }, 6)
-
-        function debounce(func, wait, immediate) {
-            var timeout;
-            return function() {
-                var context = this,
-                    args = arguments;
-                clearTimeout(timeout);
-                timeout = setTimeout(function() {
-                    timeout = null;
-                    if (!immediate) func.apply(context, args);
-                }, wait);
-                if (immediate && !timeout) func.apply(context, args);
-            };
-        };
-
-
-        function isElementInViewport(elem) {
-            var $elem = $(elem);
-
-            // Get the scroll position of the page.
-            var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
-            var viewportTop = $(scrollElem).scrollTop();
-            var viewportBottom = viewportTop + $(window).height();
-
-            // Get the position of the element on the page.
-            var elemTop = Math.round($elem.offset().top);
-            var elemBottom = elemTop + $elem.height();
-
-            return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
+        if (isElementInViewport($elem)) {
+            var parent_top = $elem.offset().top;
+            var window_bottom = $(window).scrollTop();
+            var $image = $elem.find('.parallax-background-image')
+            var $oVal = ((window_bottom - parent_top) / 3);
+            $image.css('margin-top', $oVal + 'px');
         }
+    });
+}, 6)
+
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function () {
+        var context = this,
+            args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        }, wait);
+        if (immediate && !timeout) func.apply(context, args);
+    };
+};
+
+
+function isElementInViewport(elem) {
+    var $elem = $(elem);
+
+    // Get the scroll position of the page.
+    var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
+    var viewportTop = $(scrollElem).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    // Get the position of the element on the page.
+    var elemTop = Math.round($elem.offset().top);
+    var elemBottom = elemTop + $elem.height();
+
+    return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
+}
