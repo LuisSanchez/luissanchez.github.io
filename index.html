@@ -1,487 +1,715 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="assets/img/icon.gif">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Luis Sánchez - Software Engineer</title>
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="keywords"
-        content="resume, luissanchez, luis sanchez, software engineer, senior software engineer, luissanchezm86, luis.sanchezm86" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Luis Sánchez - Software Engineer">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="profile:luissanchezm86">
-    <meta property="og:description"
-        content="Software Engineer offering more than 10 years of experience." />
-    <meta property="og:site_name" content="Luis Sánchez - Software Engineer">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luis Sánchez - CTO & Software Engineer with 10+ years experience in AI, Data Engineering, Django, React, and Azure. Apache Superset contributor.">
+    <meta name="keywords" content="CTO, Software Engineer, AI, Data Engineering, Django, React, Azure, Apache Superset, Python, Luis Sanchez">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Luis Sánchez - CTO & Software Engineer">
+    <meta property="og:description" content="CTO at revenew.cl | 10+ years experience | Apache Superset Contributor | AI & Data Engineering">
+    <meta property="og:type" content="website">
     <meta property="og:url" content="https://luissanchez.github.io/">
-    <meta property="og:image" content="https://secure.gravatar.com/avatar/3cffa63fdc22d8f520bac746bb32ef59">
-    <meta property="og:image:width" content="80">
-    <meta property="og:image:height" content="80">
-
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@luissanchezm86" />
-    <meta name="twitter:title" content="Luis Sánchez - Software Engineer" />
-    <meta name="twitter:description"
-        content="Software Engineer offering more than 10 years of experience." />
-    <meta name="twitter:image" content="https://secure.gravatar.com/avatar/3cffa63fdc22d8f520bac746bb32ef59" />
-
-
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/css/landing-page.min.css" rel="stylesheet" />
-
-    <!--     Fonts and icons     -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
-    <link href="assets/css/pe-icon-7-stroke.min.css" rel="stylesheet" />
-
+    <meta property="og:image" content="https://luissanchez.github.io/assets/img/self-1.jpeg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Luis Sánchez - CTO & Software Engineer">
+    <meta name="twitter:description" content="CTO at revenew.cl | 10+ years experience | Apache Superset Contributor | AI & Data Engineering">
+    <meta name="twitter:image" content="https://luissanchez.github.io/assets/img/self-1.jpeg">
+    
+    <title>Luis Sánchez - CTO & Software Engineer</title>
+    <link rel="icon" type="image/png" href="assets/img/icon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        
+        /* Glass effect */
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Card hover effect */
+        .hover-card {
+            transition: all 0.3s ease;
+        }
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Tech badge */
+        .tech-badge {
+            transition: all 0.2s ease;
+        }
+        .tech-badge:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Timeline */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #3b82f6;
+            border: 3px solid #1e293b;
+        }
+    </style>
 </head>
-
-<body class="landing-page landing-page1">
-    <nav class="navbar navbar-transparent navbar-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#example">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar bar1"></span>
-                    <span class="icon-bar bar2"></span>
-                    <span class="icon-bar bar3"></span>
-                </button>
-                <a href="https://stackoverflow.com/users/884784/luis" rel="noopener" target="_blank">
-                    <div class="logo-container">
-                        <div class="logo">
-                            <img src="assets/img/self-1.jpeg" alt="Luis Sánchez">
-                        </div>
-                        <div class="brand">
-                            Luis Sánchez
-                        </div>
-                    </div>
+<body class="bg-slate-900 text-slate-100 antialiased">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="text-xl font-bold font-mono">
+                    <span class="text-blue-400"><</span>Luis<span class="text-purple-400">/></span>
                 </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm text-slate-300 hover:text-white transition-colors">About</a>
+                    <a href="#experience" class="text-sm text-slate-300 hover:text-white transition-colors">Experience</a>
+                    <a href="#skills" class="text-sm text-slate-300 hover:text-white transition-colors">Skills</a>
+                    <a href="#opensource" class="text-sm text-slate-300 hover:text-white transition-colors">Open Source</a>
+                    <a href="#contact" class="text-sm px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-full transition-colors">Contact</a>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="example">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="https://www.linkedin.com/in/luissanchezm86/"
-                            rel="noopener" target="_blank">
-                            <i class="fa fa-linkedin-square"></i> LinkedIn</a>
-                    </li>
-                    <!-- <li>
-                        <a href="https://twitter.com/luissanchezm86" rel="noopener" target="_blank">
-                            <i class="fa fa-twitter"></i> Twitter</a>
-                    </li> -->
-                    <li>
-                        <a href="https://github.com/LuisSanchez" rel="noopener" target="_blank">
-                            <i class="fa fa-github-square"></i> GitHub</a>
-                    </li>
-                </ul>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="#about" class="block py-2 text-slate-300 hover:text-white">About</a>
+                <a href="#experience" class="block py-2 text-slate-300 hover:text-white">Experience</a>
+                <a href="#skills" class="block py-2 text-slate-300 hover:text-white">Skills</a>
+                <a href="#opensource" class="block py-2 text-slate-300 hover:text-white">Open Source</a>
+                <a href="#contact" class="block py-2 text-blue-400">Contact</a>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
     </nav>
 
-    <div class="wrapper">
-        <div class="parallax filter-gradient blue" data-color="blue">
-            <div class="parallax-background">
-                <img class="parallax-background-image" src="assets/img/template/bg3.jpg" alt="Background" />
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5 hidden-xs col-sm-6">
-                        <div class="parallax-image">
-                            <img class="phone" src="assets/img/template/main-opt.png" alt="Skills"
-                                style="margin-top: 20px" />
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-md-offset-1">
-                        <div class="description">
-                            <h2>Welcome!</h2>
-                            <br>
-                            <h5>As a Software Engineer, I offer over 10 years of experience successfully completing
-                                simultaneous projects. I am enthusiastic about developing forward-thinking solutions to
-                                tomorrow's productivity problems and have a resourceful and adaptable approach to
-                                challenges. I am a decisive leader and reliable team builder, with a results-focused and
-                                driven approach.</h5>
-                        </div>
-                        <!-- <div class="buttons">
-                                <button class="btn btn-fill btn-neutral">
-                                <i class="fa fa-apple"></i>
-                                </button>
-                                <button class="btn btn-simple btn-neutral">
-                                <i class="fa fa-android"></i>
-                                </button>
-                                <button class="btn btn-simple btn-neutral">
-                                <i class="fa fa-windows"></i>
-                                </button>
-                            </div> -->
-                    </div>
-                </div>
-            </div>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
         </div>
-
-        <div class="section section-clients">
-            <div class="container text-center">
-                <h4 class="header-text">A team player</h4>
-                <p>
-                    Hardworking software engineer driven to increase team effectiveness.
-                    Focused on usability and performance improvements by developing useful,
-                    efficient and cost-effective projects.
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+            <div class="text-center">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-blue-300 mb-8 animate-fade-in-up opacity-0">
+                    <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                    Available for opportunities
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up opacity-0 delay-100">
+                    Hi, I'm <span class="gradient-text">Luis Sánchez</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-slate-400 mb-4 animate-fade-in-up opacity-0 delay-200">
+                    CTO & Software Engineer
                 </p>
-                <div class="logos">
-                    <ul class="list-unstyled">
-                        <li><img src="assets/img/logos/python.jpg" alt="Python" /></li>
-                        <li><img src="assets/img/logos/django-opt.png" alt="django" /></li>
-                        <li><img src="assets/img/logos/react-opt.png" alt="nodejs" /></li>
-                        <!-- <li><img src="assets/img/logos/dotnetcore.png" alt="dotnet core" /></li> -->
-                        <!-- <li><img src="assets/img/logos/docker.png" alt="Docker" /></li> -->
-                        <li><img src="assets/img/logos/azure.png" alt="Azure" /></li>
-                        <li><img src="assets/img/logos/gcp.png" alt="Azure" /></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="section section-demo">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div id="description-carousel" class="carousel fade" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img src="assets/img/template/examples/postgres-opt.png" alt="Postgres">
-                                </div>
-                                <div class="item">
-                                    <img src="assets/img/template/examples/k8s.png" alt="Kubernetes">
-                                </div>
-                                <div class="item">
-                                    <img src="assets/img/template/examples/docker.png" alt="Docker">
-                                </div>
-                                <div class="item">
-                                    <img src="assets/img/template/examples/sqlserver.png" alt="SQLServer">
-                                </div>
-                            </div>
-                            <ol class="carousel-indicators carousel-indicators-blue">
-                                <li data-target="#description-carousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#description-carousel" data-slide-to="1" class=""></li>
-                                <li data-target="#description-carousel" data-slide-to="2" class=""></li>
-                                <li data-target="#description-carousel" data-slide-to="3" class=""></li>
-                            </ol>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-md-offset-1">
-                        <h4 class="header-text">Always learning</h4>
-                        <!-- <p>
-                                With the new technologies at our door, we have to keep moving and learning all the time.
-                            </p> -->
-                        <p>
-                            In my GitHub you can find a few different sandboxes and projects that I have worked on.
-                            From .Net core to Python, from Docker to Kubernetes, from SQL Server to Postgres.
-                        </p>
-                        <p>
-                            <!-- The Web API image has an Alpine base to make it smaller. It resides on
-                            <a href="https://hub.docker.com/r/luissanchezm86/addresstestalpinecore31" rel="noopener"
-                                target="_blank">my Docker Hub</a> -->
-                            Click on the button below to check my
-                            <a href="https://github.com/LuisSanchez/" rel="noopener"
-                                target="_blank"> GitHub</a>
-                            repository.
-                        </p>
-
-                        <p class="text-center">
-                            <br>
-                            <!-- <button type="button" id="container-test" class="btn btn-fill btn-info" data-toggle="modal"
-                                data-target="#json-data-modal">
-                                Make request</button> -->
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section section-presentation">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="description">
-                            <h4 class="header-text">Skills</h4>
-                            <p>A little bit of humor is always important, that being said, lets talk about my skills.
-                            </p>
-
-                            <div class="col-sm-12">
-                                <!-- <h5>.NET Framework, .NET Core, EF, Web API, MVC</h5> -->
-                                <!-- <div class="" style="width:100%;">
-                                    <div class="progress" style="height:9px; margin:8px 0;">
-                                        <div class="progress-bar progress-bar-primary" role="progressbar"
-                                            aria-valuenow="5" aria-valuemin="0" aria-valuemax="5" style="width: 100%">
-                                            <span class="sr-only">80% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div> -->
-
-                                <h5>Python with Django</h5>
-                                <div class="" style="width:100%;">
-                                    <div class="progress" style="height:9px; margin:8px 0;">
-                                        <div class="progress-bar progress-bar-primary" role="progressbar"
-                                            aria-valuenow="5" aria-valuemin="0" aria-valuemax="5" style="width: 100%">
-                                            <span class="sr-only">100% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <h5>NodeJS with Express</h5>
-                                <div class="" style="width:100%;">
-                                    <div class="progress" style="height:9px; margin:8px 0;">
-                                        <div class="progress-bar progress-bar-primary" role="progressbar"
-                                            aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%">
-                                            <span class="sr-only">80% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <h5>CSS3, HTML, JavaScript</h5>
-                                <div class="" style="width:100%;">
-                                    <div class="progress" style="height:9px; margin:8px 0;">
-                                        <div class="progress-bar progress-bar-primary" role="progressbar"
-                                            aria-valuenow="4" aria-valuemin="0" aria-valuemax="5" style="width: 80%">
-                                            <span class="sr-only">80% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <h5>SQL & NoSQL</h5>
-                                <div class="" style="width:100%;">
-                                    <div class="progress" style="height:9px; margin:8px 0;">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="4"
-                                            aria-valuemin="0" aria-valuemax="5" style="width: 60%">
-                                            <span class="sr-only">80% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <h5>React</h5>
-                                <div class="" style="width:100%;">
-                                    <div class="progress" style="height:9px; margin:8px 0;">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="4"
-                                            aria-valuemin="0" aria-valuemax="5" style="width: 60%">
-                                            <span class="sr-only">70% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <h5>Microservices architecture</h5>
-                                <div class="" style="width:100%;">
-                                    <div class="progress" style="height:9px; margin:8px 0;">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="3"
-                                            aria-valuemin="0" aria-valuemax="5" style="width: 60%">
-                                            <span class="sr-only">80% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <h5>Docker</h5>
-                                <div class="" style="width:100%;">
-                                    <div class="progress" style="height:9px; margin:8px 0;">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="3"
-                                            aria-valuemin="0" aria-valuemax="5" style="width: 60%">
-                                            <span class="sr-only">80% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <h5>Azure platform</h5>
-                                <div class="" style="width:100%;">
-                                    <div class="progress" style="height:9px; margin:8px 0;">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="3"
-                                            aria-valuemin="0" aria-valuemax="5" style="width: 60%">
-                                            <span class="sr-only">80% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <h5>Google API and GCP</h5>
-                                <div class="" style="width:100%;">
-                                    <div class="progress" style="height:9px; margin:8px 0;">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="3"
-                                            aria-valuemin="0" aria-valuemax="5" style="width: 60%">
-                                            <span class="sr-only">80% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-md-offset-1 skills-img-wrapper">
-                        <img src="assets/img/template/1.jpeg" alt="Debugging joke" />
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- <div class="section section-features">
-                <div class="container">
-                    <h4 class="header-text text-center">Features</h4>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card card-blue">
-                                <div class="icon">
-                                    <i class="pe-7s-note2"></i>
-                                </div>
-                                <div class="text">
-                                    <h4>Online Customers Management</h4>
-                                    <p>All appointments sync with your Google calendar so your availability is always up to date. See your schedule at a glance from any device.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card card-blue">
-                                <div class="icon">
-                                    <i class="pe-7s-bell"></i>
-                                </div>
-                                <h4>Smart Notifications on hands</h4>
-                                <p>Automatic text and email reminders make sure customers always remember their upcoming appointments.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card card-blue">
-                                <div class="icon">
-                                    <i class="pe-7s-graph1"></i>
-                                </div>
-                                <h4>Know your business better now</h4>
-                                <p>Take payments and run your business on the go, in your store and then see how it all adds up with analytics.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-        <div class="section section-testimonial">
-            <div class="container">
-                <h4 class="header-text text-center">A little bit more of me!</h4>
-                <div id="carousel-example-generic" class="carousel fade" data-ride="carousel">
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <div class="mask">
-                                <img src="assets/img/faces/self-1.jpeg" alt="self">
-                            </div>
-                            <div class="carousel-testimonial-caption">
-                                <p>Luis Sánchez</p>
-                                <h3>"Don't Try to Be the Best. Just Be 1% Better Every Day!"</h3>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="mask">
-                                <img src="assets/img/faces/self-2-opt.jpg" alt="Atacama Challenger">
-                            </div>
-                            <div class="carousel-testimonial-caption">
-                                <p>Me at the Atacama Challenger 2018</p>
-                                <h3>"Why I'm I doing this? It's the Atacama Desert OMG!"</h3>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="mask">
-                                <img src="assets/img/faces/bike-3-opt.jpg" alt="Honda CBR600rr">
-                            </div>
-                            <div class="carousel-testimonial-caption">
-                                <p>Hopes and dreams!</p>
-                                <h3>“Tension is who you think you should be. Relaxation is who you are.” - Chinese
-                                    Proverb</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <ol class="carousel-indicators carousel-indicators-blue">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-
-        <div class="section section-no-padding">
-            <div class="parallax filter-gradient blue" data-color="blue">
-                <div class="parallax-background">
-                    <img class="parallax-background-image" src="assets/img/template/bg3.jpg" alt="Backgound" />
-                </div>
-                <div class="info">
-                    <h1>Want to know more about my work?</h1>
-                    <p>Click on the button below to check my resume.</p>
-                    <a href="assets/files/LuisSanchez-SoftwareEngineer.pdf" rel="noopener" target="_blank"
-                        class="btn btn-neutral btn-lg btn-fill">Luis Sánchez CV</a>
-                </div>
-            </div>
-        </div>
-
-        <footer class="footer">
-            <div class="container">
-                <nav class="pull-left">
-                    <ul>
-                        <!-- <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="https://luissanchez.herokuapp.com" rel="noopener" target="_blank">Python Sandbox on
-                                Heroku</a>
-                        </li>
-                        <li>
-                            <a href="https://stackoverflow.com/story/luissanchez" rel="noopener"
-                                target="_blank">Portfolio</a>
-                        </li> -->
-                    </ul>
-                </nav>
-                <div class="social-area pull-right">
-                    <a class="btn btn-social btn-linkedin btn-simple" rel="noopener" target="_blank"
-                        href="https://www.linkedin.com/in/luissanchezm86/">
-                        <i class="fa fa-linkedin-square"></i>
+                
+                <p class="text-lg text-slate-500 max-w-2xl mx-auto mb-12 animate-fade-in-up opacity-0 delay-300">
+                    Building AI-powered solutions to improve business margins. 
+                    10+ years of experience in Data Engineering, Cloud Architecture, and Open Source.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up opacity-0 delay-400">
+                    <a href="#contact" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-full font-medium transition-all hover:scale-105 flex items-center gap-2">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                        Get in Touch
                     </a>
-                    <!-- <a class="btn btn-social btn-twitter btn-simple" rel="noopener" target="_blank"
-                        href="https://twitter.com/luissanchezm86">
-                        <i class="fa fa-twitter"></i>
-                    </a> -->
-                    <a class="btn btn-social btn-github btn-simple" rel="noopener" target="_blank"
-                        href="https://github.com/LuisSanchez">
-                        <i class="fa fa-github-square"></i>
+                    <a href="assets/files/LuisSanchez-SoftwareEngineer.pdf" target="_blank" class="px-8 py-3 glass hover:bg-slate-800 rounded-full font-medium transition-all hover:scale-105 flex items-center gap-2">
+                        <i data-lucide="download" class="w-4 h-4"></i>
+                        Download CV
                     </a>
                 </div>
-                <div class="copyright">
-                    <a href="https://stackoverflow.com/story/luissanchez" rel="noopener" target="_blank">Luis
-                        Sánchez</a>
+                
+                <!-- Tech stack preview -->
+                <div class="mt-16 flex flex-wrap items-center justify-center gap-4 animate-fade-in-up opacity-0 delay-400">
+                    <span class="px-4 py-2 glass rounded-lg text-sm text-slate-400 flex items-center gap-2">
+                        <i data-lucide="code-2" class="w-4 h-4 text-blue-400"></i>
+                        Django & React
+                    </span>
+                    <span class="px-4 py-2 glass rounded-lg text-sm text-slate-400 flex items-center gap-2">
+                        <i data-lucide="cloud" class="w-4 h-4 text-purple-400"></i>
+                        Azure & GCP
+                    </span>
+                    <span class="px-4 py-2 glass rounded-lg text-sm text-slate-400 flex items-center gap-2">
+                        <i data-lucide="database" class="w-4 h-4 text-green-400"></i>
+                        Data Engineering
+                    </span>
+                    <span class="px-4 py-2 glass rounded-lg text-sm text-slate-400 flex items-center gap-2">
+                        <i data-lucide="brain" class="w-4 h-4 text-pink-400"></i>
+                        AI & ML
+                    </span>
                 </div>
             </div>
-        </footer>
-    </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-slate-500 hover:text-slate-300 transition-colors">
+                <i data-lucide="chevron-down" class="w-6 h-6"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="aspect-square rounded-2xl overflow-hidden">
+                        <img src="assets/img/faces/self-1.jpeg" alt="Luis Sánchez" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 glass rounded-2xl p-6 max-w-xs">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+                                <i data-lucide="briefcase" class="w-6 h-6 text-blue-400"></i>
+                            </div>
+                            <div>
+                                <p class="text-2xl font-bold">10+</p>
+                                <p class="text-sm text-slate-400">Years Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="text-blue-400 font-medium mb-2">About Me</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        Driving Business Growth Through <span class="gradient-text">AI & Technology</span>
+                    </h2>
+                    <div class="space-y-4 text-slate-400 leading-relaxed">
+                        <p>
+                            I'm currently serving as <strong class="text-slate-200">CTO at revenew.cl</strong>, where I lead the development 
+                            of AI-powered solutions that help companies improve their margins and operational efficiency.
+                        </p>
+                        <p>
+                            With over a decade of experience in software engineering, I've worked across the full stack—from 
+                            building robust backend systems with <strong class="text-slate-200">Django and Python</strong> to creating 
+                            intuitive frontends with <strong class="text-slate-200">React</strong>.
+                        </p>
+                        <p>
+                            I'm also an active <strong class="text-slate-200">Apache Superset contributor</strong>, helping to advance 
+                            open-source data visualization and analytics tools used by thousands of organizations worldwide.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="https://www.linkedin.com/in/luissanchezm86/" target="_blank" rel="noopener" class="flex items-center gap-2 text-slate-400 hover:text-blue-400 transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/LuisSanchez" target="_blank" rel="noopener" class="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                            GitHub
+                        </a>
+                        <a href="https://stackoverflow.com/users/884784/luis" target="_blank" rel="noopener" class="flex items-center gap-2 text-slate-400 hover:text-orange-400 transition-colors">
+                            <i data-lucide="layers" class="w-5 h-5"></i>
+                            Stack Overflow
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Role Section -->
+    <section class="py-24 bg-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass rounded-3xl p-8 md:p-12">
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8">
+                    <div>
+                        <p class="text-blue-400 font-medium mb-2">Current Role</p>
+                        <h2 class="text-3xl font-bold">Chief Technology Officer</h2>
+                        <a href="https://revenew.cl" target="_blank" rel="noopener" class="text-xl text-slate-400 hover:text-blue-400 transition-colors flex items-center gap-2 mt-1">
+                            @ revenew.cl
+                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                    <span class="px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm font-medium">
+                        2023 - Present
+                    </span>
+                </div>
+                
+                <p class="text-slate-400 text-lg leading-relaxed mb-8">
+                    Leading the technical vision and development of AI-driven solutions that help companies optimize 
+                    their revenue streams and improve profit margins. Building and mentoring high-performing engineering 
+                    teams while architecting scalable cloud infrastructure.
+                </p>
+                
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="glass rounded-xl p-4">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-blue-400 mb-3"></i>
+                        <h3 class="font-semibold mb-1">Margin Optimization</h3>
+                        <p class="text-sm text-slate-500">AI-powered analytics for business growth</p>
+                    </div>
+                    <div class="glass rounded-xl p-4">
+                        <i data-lucide="cpu" class="w-8 h-8 text-purple-400 mb-3"></i>
+                        <h3 class="font-semibold mb-1">Machine Learning</h3>
+                        <p class="text-sm text-slate-500">Predictive models for revenue forecasting</p>
+                    </div>
+                    <div class="glass rounded-xl p-4">
+                        <i data-lucide="users" class="w-8 h-8 text-green-400 mb-3"></i>
+                        <h3 class="font-semibold mb-1">Team Leadership</h3>
+                        <p class="text-sm text-slate-500">Building and mentoring engineering teams</p>
+                    </div>
+                    <div class="glass rounded-xl p-4">
+                        <i data-lucide="cloud" class="w-8 h-8 text-orange-400 mb-3"></i>
+                        <h3 class="font-semibold mb-1">Cloud Architecture</h3>
+                        <p class="text-sm text-slate-500">Scalable Azure & GCP infrastructure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-blue-400 font-medium mb-2">Expertise</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Technical Skills</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">
+                    A comprehensive toolkit built over 10+ years of building production-grade applications
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Backend -->
+                <div class="glass rounded-2xl p-6 hover-card">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="server" class="w-6 h-6 text-blue-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Backend Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">Python</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">Django</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">Node.js</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">Express</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">REST APIs</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">GraphQL</span>
+                    </div>
+                </div>
+                
+                <!-- Frontend -->
+                <div class="glass rounded-2xl p-6 hover-card">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="layout" class="w-6 h-6 text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Frontend Development</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">React</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">JavaScript</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">TypeScript</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">HTML5/CSS3</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">Tailwind CSS</span>
+                    </div>
+                </div>
+                
+                <!-- Data Engineering -->
+                <div class="glass rounded-2xl p-6 hover-card">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="database" class="w-6 h-6 text-green-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Data Engineering</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">PostgreSQL</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">SQL Server</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">MongoDB</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">Redis</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">ETL Pipelines</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">Apache Airflow</span>
+                    </div>
+                </div>
+                
+                <!-- Cloud & DevOps -->
+                <div class="glass rounded-2xl p-6 hover-card">
+                    <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="cloud" class="w-6 h-6 text-orange-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Cloud & DevOps</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">Azure</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">GCP</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">Docker</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">Kubernetes</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">CI/CD</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">Terraform</span>
+                    </div>
+                </div>
+                
+                <!-- AI/ML -->
+                <div class="glass rounded-2xl p-6 hover-card">
+                    <div class="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="brain" class="w-6 h-6 text-pink-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">AI & Machine Learning</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">TensorFlow</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">PyTorch</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">scikit-learn</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">Pandas</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">NumPy</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">OpenAI API</span>
+                    </div>
+                </div>
+                
+                <!-- Data Visualization -->
+                <div class="glass rounded-2xl p-6 hover-card">
+                    <div class="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center mb-4">
+                        <i data-lucide="bar-chart-3" class="w-6 h-6 text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Data Visualization</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">Apache Superset</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">Tableau</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">D3.js</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">Plotly</span>
+                        <span class="tech-badge px-3 py-1 bg-slate-800 rounded-full text-sm">Matplotlib</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Section -->
+    <section id="opensource" class="py-24 bg-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-blue-400 font-medium mb-2">Community</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Open Source Contributions</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">
+                    Giving back to the community through active contribution to industry-leading projects
+                </p>
+            </div>
+            
+            <div class="glass rounded-3xl p-8 md:p-12 hover-card">
+                <div class="flex flex-col md:flex-row items-start gap-8">
+                    <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="flame" class="w-10 h-10 text-white"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold">Apache Superset</h3>
+                                <a href="https://superset.apache.org/" target="_blank" rel="noopener" class="text-slate-400 hover:text-orange-400 transition-colors flex items-center gap-2">
+                                    superset.apache.org
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                </a>
+                            </div>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/20 text-orange-400 rounded-full text-sm">
+                                <i data-lucide="star" class="w-4 h-4"></i>
+                                Apache Software Foundation
+                            </span>
+                        </div>
+                        <p class="text-slate-400 leading-relaxed mb-6">
+                            Apache Superset is a modern, enterprise-ready business intelligence web application. 
+                            It enables data exploration and visualization with an intuitive interface for creating 
+                            interactive dashboards. Used by thousands of companies including Airbnb, Netflix, and Twitter.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex items-center gap-2 text-slate-400">
+                                <i data-lucide="git-commit" class="w-4 h-4 text-green-400"></i>
+                                <span class="text-sm">Active Contributor</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-400">
+                                <i data-lucide="code" class="w-4 h-4 text-blue-400"></i>
+                                <span class="text-sm">Python & React</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-400">
+                                <i data-lucide="users" class="w-4 h-4 text-purple-400"></i>
+                                <span class="text-sm">50k+ GitHub Stars</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-blue-400 font-medium mb-2">Career</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Professional Journey</h2>
+            </div>
+            
+            <div class="relative border-l-2 border-slate-700 ml-4 space-y-12">
+                <!-- Current -->
+                <div class="timeline-item relative pl-8">
+                    <div class="glass rounded-2xl p-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                            <h3 class="text-xl font-bold">Chief Technology Officer</h3>
+                            <span class="text-sm text-slate-400">2023 - Present</span>
+                        </div>
+                        <a href="https://revenew.cl" target="_blank" rel="noopener" class="text-blue-400 font-medium hover:underline">revenew.cl</a>
+                        <p class="text-slate-400 mt-3">
+                            Leading technical strategy and AI product development to help companies improve margins 
+                            through intelligent automation and predictive analytics.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Previous roles placeholder - user can customize -->
+                <div class="timeline-item relative pl-8">
+                    <div class="glass rounded-2xl p-6">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                            <h3 class="text-xl font-bold">Senior Software Engineer</h3>
+                            <span class="text-sm text-slate-400">Previous Experience</span>
+                        </div>
+                        <p class="text-slate-400">
+                            10+ years of experience building scalable web applications, data pipelines, and 
+                            cloud infrastructure across various industries.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-blue-400 font-medium mb-2">Get in Touch</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Work Together</h2>
+                <p class="text-slate-400 mb-12">
+                    I'm always interested in hearing about new projects and opportunities. 
+                    Whether you're looking for a technical advisor, consultant, or collaboration.
+                </p>
+                
+                <div class="grid sm:grid-cols-2 gap-6 mb-12">
+                    <a href="https://www.linkedin.com/in/luissanchezm86/" target="_blank" rel="noopener" 
+                       class="glass rounded-2xl p-6 hover-card text-left group">
+                        <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-500/30 transition-colors">
+                            <i data-lucide="linkedin" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <h3 class="font-semibold mb-1">LinkedIn</h3>
+                        <p class="text-sm text-slate-400">Connect professionally</p>
+                    </a>
+                    
+                    <a href="https://github.com/LuisSanchez" target="_blank" rel="noopener" 
+                       class="glass rounded-2xl p-6 hover-card text-left group">
+                        <div class="w-12 h-12 bg-slate-700 rounded-xl flex items-center justify-center mb-4 group-hover:bg-slate-600 transition-colors">
+                            <i data-lucide="github" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="font-semibold mb-1">GitHub</h3>
+                        <p class="text-sm text-slate-400">See my code</p>
+                    </a>
+                    
+                    <a href="https://stackoverflow.com/users/884784/luis" target="_blank" rel="noopener" 
+                       class="glass rounded-2xl p-6 hover-card text-left group">
+                        <div class="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-orange-500/30 transition-colors">
+                            <i data-lucide="layers" class="w-6 h-6 text-orange-400"></i>
+                        </div>
+                        <h3 class="font-semibold mb-1">Stack Overflow</h3>
+                        <p class="text-sm text-slate-400">Tech discussions</p>
+                    </a>
+                    
+                    <a href="assets/files/LuisSanchez-SoftwareEngineer.pdf" target="_blank" 
+                       class="glass rounded-2xl p-6 hover-card text-left group">
+                        <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-green-500/30 transition-colors">
+                            <i data-lucide="file-text" class="w-6 h-6 text-green-400"></i>
+                        </div>
+                        <h3 class="font-semibold mb-1">Resume</h3>
+                        <p class="text-sm text-slate-400">Download CV</p>
+                    </a>
+                </div>
+                
+                <p class="text-slate-500 text-sm">
+                    Based in Santiago, Chile • Available for remote opportunities
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl font-bold font-mono">
+                        <span class="text-blue-400"><</span>Luis<span class="text-purple-400">/></span>
+                    </span>
+                </div>
+                <p class="text-slate-500 text-sm">
+                    © 2025 Luis Sánchez. Built with passion and clean code.
+                </p>
+                <div class="flex items-center gap-4">
+                    <a href="https://github.com/LuisSanchez" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition-colors">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/luissanchezm86/" target="_blank" rel="noopener" class="text-slate-400 hover:text-blue-400 transition-colors">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass');
+            } else {
+                navbar.classList.remove('glass');
+            }
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+        
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all cards and sections
+        document.querySelectorAll('.hover-card, .timeline-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
-
-<!-- Modal -->
-<div class="modal fade" id="json-data-modal" tabindex="-1" role="dialog" aria-labelledby="json-data-modal-title">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="json-data-modal-title">Experiment Request For an Address</h4>
-            </div>
-            <div class="modal-body">
-                <h5 id='please-wait' class="text-center"></h5>
-                <pre id="json-data-body"></pre>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-fill btn-info" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-<script src="assets/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="assets/js/awesome-landing-page.min.js" type="text/javascript"></script>
-
 </html>
