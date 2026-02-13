@@ -50,4 +50,4 @@ Active contributor to [Apache Superset](https://superset.apache.org/) - A modern
 
 ---
 
-© 2025 Luis Sánchez. Built with passion and clean code.
+© 2026 Luis Sánchez. Built with passion and clean code.
